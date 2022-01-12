@@ -10,8 +10,8 @@
     "build": "rimraf ./dist && rimraf ./typings && cross-env NODE_ENV=production rollup -c",
     "dev": "rollup -c -w",
     "test": "node test/test.js",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "cross-env NODE_ENV=production vuepress build docs"
+    "docs:dev": "vuepress dev vuepress",
+    "docs:build": "cross-env NODE_ENV=production vuepress build vuepress"
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",

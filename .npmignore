@@ -1,0 +1,8 @@
+node_modules
+/docs
+/package
+/test
+/types
+.*
+ts*
+rollup.config.js
