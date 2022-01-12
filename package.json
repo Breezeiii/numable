@@ -6,6 +6,21 @@
   "module": "dist/index.m.js",
   "umd:main": "dist/index.umd.js",
   "typings": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LIUHAIFENGzzzzz/numberal"
+  },
+  "bugs": {
+    "url": "https://github.com/LIUHAIFENGzzzzz/numberal/issues"
+  },
+  "homepage": "https://liuhaifengzzzzz.github.io/numberal",
+  "keywords": [
+    "numberal",
+    "number",
+    "format",
+    "peprcent",
+    "time"
+  ],
   "scripts": {
     "build": "rimraf ./dist && rimraf ./typings && cross-env NODE_ENV=production rollup -c",
     "dev": "rollup -c -w",
