@@ -25,6 +25,20 @@ console.log(nnn.format("#,###"));
 // console => 123,456
 ```
 
+<style>
+table {
+  display:table
+};
+table thead{
+  text-align:left;
+}
+table,
+table thead,
+table tbody {
+ width: 100%
+}
+</style>
+
 | number     | format    | console    |
 | ---------- | --------- | ---------- |
 | 123456.123 | #,###     | 123,456    |
