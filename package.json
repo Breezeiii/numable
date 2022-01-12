@@ -1,0 +1,39 @@
+{
+  "name": "numberal",
+  "description": "",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "module": "dist/index.m.js",
+  "umd:main": "dist/index.umd.js",
+  "typings": "index.d.ts",
+  "scripts": {
+    "build": "rimraf ./dist && rimraf ./typings && cross-env NODE_ENV=production rollup -c",
+    "dev": "rollup -c -w",
+    "test": "node test/test.js",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "cross-env NODE_ENV=production vuepress build docs"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "@rollup/plugin-json": "^4.1.0",
+    "@types/lodash": "^4.14.178",
+    "core-js": "^2.6.12",
+    "cross-env": "^7.0.3",
+    "lodash": "^4.17.21",
+    "rimraf": "^3.0.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-filesize": "^9.1.2",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.31.1",
+    "tslib": "^2.3.1",
+    "typedoc": "^0.22.10",
+    "typescript": "^4.5.4",
+    "vuepress-theme-vdoing": "^1.9.4",
+    "vuepress-webpack": "^2.0.0-beta.33"
+  }
+}
