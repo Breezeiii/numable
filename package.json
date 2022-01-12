@@ -1,5 +1,5 @@
 {
-  "name": "numberal",
+  "name": "numable",
   "description": "",
   "version": "0.0.1",
   "main": "dist/index.js",
@@ -8,14 +8,14 @@
   "typings": "index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LIUHAIFENGzzzzz/numberal"
+    "url": "git+https://github.com/LIUHAIFENGzzzzz/numable"
   },
   "bugs": {
-    "url": "https://github.com/LIUHAIFENGzzzzz/numberal/issues"
+    "url": "https://github.com/LIUHAIFENGzzzzz/numable/issues"
   },
-  "homepage": "https://liuhaifengzzzzz.github.io/numberal",
+  "homepage": "https://liuhaifengzzzzz.github.io/numable",
   "keywords": [
-    "numberal",
+    "numable",
     "number",
     "format",
     "peprcent",

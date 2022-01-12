@@ -1,28 +1,28 @@
 import { __default } from "./variable";
 
-export default function (numberal: any): void {
+export default function (numable: any): void {
   (function () {
-    numberal.register("local", __default.currentLocal, {
+    numable.register("local", __default.currentLocal, {
       decimal: ".",
       delimiter: ","
     });
   })();
 
   (function () {
-    numberal.register("format", "percent", {
+    numable.register("format", "percent", {
       regexps: {
         format: /(%)/
       },
       format: function (value: number, pattern: string = ""): string {
         const scalePercentByValue: number = 100;
 
-        return numberal._.numberToFormat(value * scalePercentByValue, pattern);
+        return numable._.numberToFormat(value * scalePercentByValue, pattern);
       }
     });
   })();
 
   (function () {
-    numberal.register("format", "time", {
+    numable.register("format", "time", {
       regexps: {
         format: /([hms]{1,}:*)/
       },

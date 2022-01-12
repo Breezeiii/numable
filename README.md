@@ -1,25 +1,25 @@
 ## use
 
 ```
-npm install numberal -S
+npm install numable -S
 ```
 
 ```js
-var numberal = require("numberal");
+var numable = require("numable");
 or;
-import numberal from "numberal";
+import numable from "numable";
 ```
 
 ## Create
 
 ```js
-const nnn = numberal(123456.123456);
+const nnn = numable(123456.123456);
 ```
 
 ## Format
 
 ```js
-const nnn = numberal(123456.123456);
+const nnn = numable(123456.123456);
 
 console.log(nnn.format("#,###"));
 // console => 123,456
@@ -41,7 +41,7 @@ console.log(nnn.format("#,###"));
 Default Formatting
 
 ```js
-numberal.defaultOptions({
+numable.defaultOptions({
   currentLocal: "zh-CN",
   zeroFormat: null,
   nullFormat: null,
@@ -52,25 +52,25 @@ numberal.defaultOptions({
 ## Local
 
 ```js
-numberal.register("local", "custom-local", {
+numable.register("local", "custom-local", {
   decimal: ".",
   delimiter: ","
 });
 
-numberal.local("custom-local");
+numable.local("custom-local");
 ```
 
 ## Custom Format
 
 ```js
-numberal.register("format", "percent", {
+numable.register("format", "percent", {
   regexps: {
     format: /(%)/
   },
   format: function (value, pattern = "") {
     const scalePercentByValue = 100;
 
-    return numberal._.numberToFormat(value * 100, pattern);
+    return numable._.numberToFormat(value * 100, pattern);
   }
 });
 ```

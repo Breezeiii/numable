@@ -5,13 +5,13 @@ export interface __defaultModel {
     defaultFormat: string;
     [key: string]: any;
 }
-export interface NumberalModel {
+export interface numableModel {
     input: number;
     value: number;
     [key: string]: any;
 }
-export interface NumberalConstructor {
-    new (input: number, value: number): NumberalModel;
+export interface numableConstructor {
+    new (input: number, value: number): numableModel;
 }
 export interface localModel {
     decimal: string;

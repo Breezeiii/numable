@@ -1,1 +1,1 @@
-export default function (numberal: any): void;
+export default function (numable: any): void;

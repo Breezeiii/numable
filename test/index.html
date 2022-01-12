@@ -12,7 +12,7 @@
 <script src="../dist/index.umd.js"></script>
 <script>
   console.log("%cnumber", "color:#ff0000");
-  const a = numberal(123456.120006);
+  const a = numable(123456.120006);
   console.log("0,000", a.format("0,000"));
   console.log(a.format("#,###.0"));
   console.log(a.format("#,###.00"));
@@ -23,15 +23,15 @@
   console.log(a.format("#,###.00#"));
   console.log(a.format("#,###.000"));
   console.log("%cpercent %", "color:#ff0000");
-  const b = numberal(0.123456789);
+  const b = numable(0.123456789);
   console.log(b.format("#,###.##%"));
   console.log("%chh:mm:ss", "color:#ff0000");
-  const c = numberal(123);
+  const c = numable(123);
   console.log(c.format("hh:mm:ss"));
   console.log(c.format("m:s"));
 
   /* ############################# */
   console.log("dddddddddddddddddd");
-  const d = numberal(123);
+  const d = numable(123);
   console.log(d.format("##,##"));
 </script>

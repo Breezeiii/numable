@@ -6,14 +6,14 @@ export interface __defaultModel {
   [key: string]: any;
 }
 
-export interface NumberalModel {
+export interface numableModel {
   input: number;
   value: number;
   [key: string]: any;
 }
 
-export interface NumberalConstructor {
-  new (input: number, value: number): NumberalModel;
+export interface numableConstructor {
+  new (input: number, value: number): numableModel;
 }
 
 export interface localModel {
@@ -34,7 +34,7 @@ export interface formatsModel {
   };
 }
 
-// export interface numberalModel {
+// export interface numableModel {
 //   version: string;
 //   options: __defaultModel;
 //   formats: formatsModel;

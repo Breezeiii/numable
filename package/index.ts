@@ -2,8 +2,8 @@ import _isNaN from "lodash/isNaN";
 import { version } from "../package.json";
 
 import {
-  NumberalModel,
-  NumberalConstructor,
+  numableModel,
+  numableConstructor,
   localModel,
   localsModel,
   formatsModel,
@@ -14,19 +14,19 @@ import { locals, formats, options, __default } from "./variable";
 import numberToFormat from "./format";
 import init from "./init";
 
-const Numberal = function (
-  this: NumberalModel,
+const Numable = function (
+  this: numableModel,
   input: number,
   value: number
 ): void {
   this._input = input;
   this._value = value;
-} as unknown as NumberalConstructor;
+} as unknown as numableConstructor;
 
-function numberal(input: any): NumberalModel {
+function numable(input: any): numableModel {
   let value;
 
-  if (isNumberal(input)) {
+  if (isNumable(input)) {
     value = input.value();
   } else if (input === 0 || typeof input === "undefined") {
     value = 0;
@@ -36,20 +36,20 @@ function numberal(input: any): NumberalModel {
     value = Number(input) || null;
   }
 
-  return new Numberal(input, value);
+  return new Numable(input, value);
 }
 
-numberal.version = version;
+numable.version = version;
 
-function isNumberal(obj: any) {
-  return obj instanceof Numberal;
+function isNumable(obj: any) {
+  return obj instanceof numable;
 }
 
-numberal.options = <__defaultModel>options;
-numberal.formats = <formatsModel>formats;
-numberal.locals = <localsModel>locals;
+numable.options = <__defaultModel>options;
+numable.formats = <formatsModel>formats;
+numable.locals = <localsModel>locals;
 
-numberal.local = function (key: string): string {
+numable.local = function (key: string): string {
   if (key) {
     options.currentLocal = key.toLowerCase();
   }
@@ -57,7 +57,7 @@ numberal.local = function (key: string): string {
   return options.currentLocal;
 };
 
-numberal.localData = function (key: string): localModel {
+numable.localData = function (key: string): localModel {
   if (!key) {
     return locals[options.currentLocale];
   }
@@ -70,30 +70,30 @@ numberal.localData = function (key: string): localModel {
   return locals[key];
 };
 
-numberal.reset = function () {
+numable.reset = function () {
   Object.keys(__default).forEach((key: string) => {
     options[key] = __default[key];
   });
 };
 
-numberal.defaultOptions = function (__options: __defaultModel): __defaultModel {
+numable.defaultOptions = function (__options: __defaultModel): __defaultModel {
   Object.assign(options, __options);
   return options;
 };
 
-// numberal.zeroFormat = function (format?: string) {
+// numable.zeroFormat = function (format?: string) {
 //   options.zeroFormat = typeof format === "string" ? format : null;
 // };
 
-// numberal.nullFormat = function (format?: string) {
+// numable.nullFormat = function (format?: string) {
 //   options.nullFormat = typeof format === "string" ? format : null;
 // };
 
-// numberal.defaultFormat = function (format?: string) {
+// numable.defaultFormat = function (format?: string) {
 //   options.defaultFormat = typeof format === "string" ? format : "#,###";
 // };
 
-numberal.register = function (
+numable.register = function (
   this: any,
   type: string,
   name: string,
@@ -110,13 +110,13 @@ numberal.register = function (
   return __obj;
 };
 
-numberal._ = {
+numable._ = {
   numberToFormat
 };
 
-numberal.fn = Numberal.prototype = {
-  clone: function (this: NumberalModel) {
-    return numberal(this);
+numable.fn = numable.prototype = {
+  clone: function (this: numableModel) {
+    return numable(this);
   },
   format: function (inputString: string) {
     var value: number = this._value,
@@ -159,6 +159,6 @@ numberal.fn = Numberal.prototype = {
   }
 };
 
-init(numberal);
+init(numable);
 
-export default numberal;
+export default numable;
