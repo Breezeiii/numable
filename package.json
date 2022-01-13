@@ -1,11 +1,11 @@
 {
   "name": "numable",
   "description": "Format numbers.",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "dist/index.js",
   "module": "dist/index.m.js",
   "umd:main": "dist/index.umd.js",
-  "typings": "index.d.ts",
+  "typings": "typings/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LIUHAIFENGzzzzz/numable"
