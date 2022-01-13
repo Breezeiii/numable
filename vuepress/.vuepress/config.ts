@@ -8,5 +8,33 @@ module.exports = {
   lang: "zh-CN",
   title: `${pkg.name}`,
   description: pkg.description,
-  dest: "docs"
+  dest: "docs",
+  theme: "@vuepress/theme-default",
+  plugins: [
+    [
+      "@vuepress/plugin-search",
+      {
+        locales: {
+          "/": {
+            placeholder: "Search"
+          }
+          // "/zh/": {
+          //   placeholder: "搜索"
+          // }
+        }
+      }
+    ]
+  ],
+  themeConfig: {
+    navbar: [
+      {
+        text: "指南",
+        link: "/"
+      },
+      {
+        text: "示例",
+        link: "/Example.md"
+      }
+    ]
+  }
 };
