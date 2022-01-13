@@ -114,7 +114,7 @@ numable._ = {
   numberToFormat
 };
 
-numable.fn = numable.prototype = {
+numable.fn = Numable.prototype = {
   clone: function (this: numableModel) {
     return numable(this);
   },

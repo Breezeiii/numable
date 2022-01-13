@@ -25,21 +25,47 @@ console.log(nnn.format("#,###"));
 // console => 123,456
 ```
 
-<style>
-table {
-  display:table
-};
-table thead{
-  text-align:left;
-}
-table,
-table thead,
-table tbody {
- width: 100%
-}
-</style>
+<table style="display:table;width:100%;text-align:left">
+  <thead>
+    <th>number</th>
+    <th>format</th>
+    <th>console</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>123456.123</td>
+      <td>#,### || 0,000</td>
+      <td>123,456</td>
+    </tr>
+    <tr>
+      <td>123456.123</td>
+      <td>#,####</td>
+      <td>12,3456</td>
+    </tr>
+    <tr>111
+      <td>123456.123</td>
+      <td>##,###.00 || ##,###.##</td>
+      <td>123,456.12</td>
+    </tr>
+    <tr>
+      <td>123456.123</td>
+      <td>#,###</td>
+      <td>123,456</td>
+    </tr>
+    <tr>
+      <td>0.123</td>
+      <td>#,###% || #%</td>
+      <td>12%</td>
+    </tr>
+    <tr>
+      <td>0.123</td>
+      <td>#,###.#% || #.0%</td>
+      <td>12.3%</td>
+    </tr>
+  </tbody>
+</table>
 
-| number     | format    | console    |
+<!-- | number     | format    | console    |
 | ---------- | --------- | ---------- |
 | 123456.123 | #,###     | 123,456    |
 | 123456.123 | #,####    | 12,3456    |
@@ -49,7 +75,7 @@ table tbody {
 | 0.123      | #,###%    | 12%        |
 | 0.123      | #.0%      | 12.3%      |
 | 123        | hh:mm:ss  | 00:02:03   |
-| 123        | mm:ss     | 02:03      |
+| 123        | mm:ss     | 02:03      | -->
 
 ## Settings
 
@@ -85,7 +111,7 @@ numable.register("format", "percent", {
   format: function (value, pattern = "") {
     const scalePercentByValue = 100;
 
-    return numable._.numberToFormat(value * 100, pattern);
+    return numable._.numberToFormat(value * scalePercentByValue, pattern);
   }
 });
 ```

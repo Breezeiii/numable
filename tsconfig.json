@@ -7,10 +7,9 @@
     "strict": true,
     "sourceMap": true,
     "declaration": true,
+    "declarationDir": "typings",
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "declarationDir": "typings",
-    "typeRoots": ["node_modules/@types"]
+    "emitDecoratorMetadata": true
   }
 }
