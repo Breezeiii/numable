@@ -31,7 +31,7 @@ const nnn = numable(123456.123456);
 
 ## Format
 
-[demo documentation](https://liuhaifengzzzzz.github.io/numable/example.html)
+[See the documentation for detailed formatting Settings](https://liuhaifengzzzzz.github.io/numable/example.html)
 
 ```js
 const nnn = numable(123456.123456);

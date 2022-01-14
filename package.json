@@ -1,7 +1,7 @@
 {
   "name": "numable",
   "description": "Format numbers.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "module": "dist/index.m.js",
   "umd:main": "dist/index.umd.js",
