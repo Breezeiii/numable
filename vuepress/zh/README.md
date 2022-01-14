@@ -4,14 +4,11 @@ home: true
 # heroText: Hero 标题
 # tagline: Hero 副标题
 actions:
-  - text: 快速上手
-    link: /getting-started/
+  - text: 介绍
+    link: /zh/getting-started/
     type: primary
-  - text: 项目简介
-    link: /guide/
-    type: secondary
-  - text: 格式化
-    link: /format/
+  - text: 指南
+    link: /zh/guide/
     type: secondary
 features:
   - title: 简简单单
