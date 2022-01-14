@@ -20,11 +20,12 @@ export interface localModel {
 export interface localsModel {
     [key: string]: localModel;
 }
-export interface formatsModel {
-    [key: string]: {
-        regexps: {
-            format: RegExp;
-        };
-        format: (value: number, pattern: string, ...args: any[]) => string;
+export interface formatModel {
+    regexps: {
+        format: RegExp;
     };
+    format: (value: number, pattern: string, ...args: any[]) => string;
+}
+export interface formatsModel {
+    [key: string]: formatModel;
 }

@@ -6,6 +6,7 @@ import {
   numableConstructor,
   localModel,
   localsModel,
+  formatModel,
   formatsModel,
   __defaultModel
 } from "./model";
@@ -70,7 +71,7 @@ numable.localData = function (key: string): localModel {
   return locals[key];
 };
 
-numable.reset = function () {
+numable.reset = function (): void {
   Object.keys(__default).forEach((key: string) => {
     options[key] = __default[key];
   });
@@ -97,7 +98,7 @@ numable.register = function (
   this: any,
   type: string,
   name: string,
-  __obj: any
+  __obj: __defaultModel | formatModel
 ) {
   // name = name.toLowerCase();
 
