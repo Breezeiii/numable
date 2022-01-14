@@ -30,7 +30,7 @@ module.exports = {
     navbar: [
       {
         text: "Guide",
-        link: "/"
+        link: "/guide.html"
       },
       {
         text: "Example",
