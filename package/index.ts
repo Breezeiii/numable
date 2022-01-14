@@ -98,7 +98,7 @@ numable.register = function (
   this: any,
   type: string,
   name: string,
-  __obj: __defaultModel | formatModel
+  options: __defaultModel | formatModel
 ) {
   // name = name.toLowerCase();
 
@@ -106,9 +106,9 @@ numable.register = function (
     throw new TypeError(name + " " + type + " already registered.");
   }
 
-  this[type + "s"][name] = __obj;
+  this[type + "s"][name] = options;
 
-  return __obj;
+  return options;
 };
 
 numable._ = {
