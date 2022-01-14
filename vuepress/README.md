@@ -7,18 +7,18 @@ actions:
   - text: Get Started
     link: /getting-started/
     type: primary
-  - text: Introduction
+  - text: Guide
     link: /guide/
     type: secondary
-  - text: Example
-    link: /example/
+  - text: Format
+    link: /format/
     type: secondary
 features:
-  - title: 简简单单
-    details: 简简单单简简单单简简单单简简单单简简单单简简单单简简单单简简单单简简单单。
-  - title: 来呀快活呀
-    details: 来呀快活呀来呀快活呀来呀快活呀来呀快活呀来呀快活呀来呀快活呀来呀快活呀。
-  - title: 死鬼
-    details: 死鬼死鬼死鬼死鬼死鬼死鬼死鬼死鬼死鬼死鬼死鬼死鬼死鬼死鬼死鬼死鬼死鬼。
+  - title: AAAAAAAAAAA
+    details: AAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAA
+  - title: BBBBBBBBBBB
+    details: BBBBBBBBBBBBBBBBBBBBB BBBBBBBBBBBBBBBBBBBBBBBBB BBBBBBBBBBBBBBBBBBBB
+  - title: CCCCCCCCCCC
+    details: CCCCCCCCCCCCCCCCCCCCC CCCCCCCCCCCCCCCCCCCCCCCCC CCCCCCCCCCCCCCCCCCCC
 footer: MIT Licensed | Copyright © 2018-present Evan You
 ---

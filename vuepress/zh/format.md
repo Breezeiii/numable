@@ -1,38 +1,47 @@
-## base
+## 基本
 
 <div class="example-group" v-for="(item, index) in Base" :key="index">
   <p class="example-format">format: <input  v-model="item.format"/></p>
   <p class="example-console">console: {{ item.number }} => {{ BaseToFormats[index] }}</p>
 </div>
 
-## FillZero
+## 填充 000000
 
 <div class="example-group" v-for="(item, index) in FillZero" :key="index">
   <p class="example-format">format: <input  v-model="item.format"/></p>
   <p class="example-console">console: {{ item.number }} => {{ FillZeroToFormats[index] }}</p>
 </div>
 
-## Currency
+## 货币
 
 <div class="example-group" v-for="(item, index) in Currency" :key="index">
   <p class="example-format">format: <input  v-model="item.format"/></p>
   <p class="example-console">console: {{ item.number }} => {{ CurrencyToFormats[index] }}</p>
 </div>
 
-## Percentage
+## 百分比
+
 <div class="example-group" v-for="(item, index) in Percentage" :key="index">
   <p class="example-format">format: <input  v-model="item.format"/></p>
   <p class="example-console">console: {{ item.number }} => {{ PercentageToFormats[index] }}</p>
 </div>
 
-## FillAnyCharacter
+## 填充任意字符
+
 <div class="example-group" v-for="(item, index) in FillAnyCharacter" :key="index">
   <p class="example-format">format: <input  v-model="item.format"/></p>
   <p class="example-console">console: {{ item.number }} => {{ FillAnyCharacterToFormats[index] }}</p>
 </div>
 
+## 时分秒
+
+<div class="example-group" v-for="(item, index) in Time" :key="index">
+  <p class="example-format">format: <input  v-model="item.format"/></p>
+  <p class="example-console">console: {{ item.number }} => {{ TimeToFormats[index] }}</p>
+</div>
+
 <script lang="ts" setup>
-import numable from "../../../../dist";
+import numable from "../../../../../dist";
 
 import { ref,reactive,computed,toRefs } from "vue";
 
@@ -87,10 +96,20 @@ const __formats = reactive({
   {
     number: percent,
     format: "AAA-#.0%-BBB",
-  }]
+  }],
+  Time:[
+    {
+      number: time,
+      format: "hh:mm:ss"
+    },
+    {
+      number: time,
+      format: "mm:ss"
+    }
+  ]
 });
 
-const { Base,FillZero,Currency,Percentage,FillAnyCharacter } = toRefs(__formats);
+const { Base,FillZero,Currency,Percentage,FillAnyCharacter,Time } = toRefs(__formats);
 const BaseToFormats = computed(()=>{
   return toFormat(Base)
 });
@@ -105,6 +124,9 @@ const PercentageToFormats = computed(()=>{
 });
 const FillAnyCharacterToFormats = computed(()=>{
   return toFormat(FillAnyCharacter)
+});
+const TimeToFormats = computed(()=>{
+  return toFormat(Time)
 });
 
 function toFormat(input){

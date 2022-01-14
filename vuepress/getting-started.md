@@ -19,7 +19,7 @@ numable.js supports all browsers that are ES5-compliant (IE8 and below are not s
 
 To check out live [examples](https://liuhaifengzzzzz.github.io/numable/example.html) and docs, visit [numableJS](https://liuhaifengzzzzz.github.io/numable).
 
-## format
+## Format
 
 [See the documentation for detailed formatting Settings](https://liuhaifengzzzzz.github.io/numable/example.html)
 
