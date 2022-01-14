@@ -29,6 +29,10 @@ module.exports = {
   themeConfig: {
     navbar: [
       {
+        text: "Get Started",
+        link: "/getting-started.html"
+      },
+      {
         text: "Guide",
         link: "/guide.html"
       },

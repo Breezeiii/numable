@@ -4,9 +4,12 @@ home: true
 # heroText: Hero 标题
 # tagline: Hero 副标题
 actions:
+  - text: Get Started
+    link: /getting-started/
+    type: primary
   - text: Introduction
     link: /guide/
-    type: primary
+    type: secondary
   - text: Example
     link: /example/
     type: secondary
