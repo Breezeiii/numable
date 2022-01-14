@@ -1,9 +1,13 @@
-## numable
+# [numable](https://liuhaifengzzzzz.github.io/numable)
 
 <img src="https://badgen.net/npm/v/numable"/>&nbsp;
 <img src="https://badgen.net/npm/license/numable"/>&nbsp;
 <img src="https://badgen.net/npm/dt/numable"/>&nbsp;
 <img src="https://badgen.net/npm/types/numable"/>
+
+A javascript library for formatting numbers.
+
+[Website and documentation](https://liuhaifengzzzzz.github.io/numable)
 
 ## use
 
@@ -13,8 +17,10 @@ npm install numable -S
 
 ```js
 var numable = require("numable");
-or;
+// or;
 import numable from "numable";
+// or;
+<script src="numable/dist/index.umd.js"></script>;
 ```
 
 ## Create
@@ -25,7 +31,7 @@ const nnn = numable(123456.123456);
 
 ## Format
 
-[demo](https://liuhaifengzzzzz.github.io/numable/example.html)
+[demo documentation](https://liuhaifengzzzzz.github.io/numable/example.html)
 
 ```js
 const nnn = numable(123456.123456);
