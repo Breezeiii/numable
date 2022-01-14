@@ -16,7 +16,7 @@ declare namespace numable {
     };
     var fn: {
         clone: (this: numableModel) => numableModel;
-        format: (inputString: string) => string;
+        format: (inputString: string, ...args: any[]) => string;
         value: () => any;
         input: () => any;
         set: (value: any) => any;

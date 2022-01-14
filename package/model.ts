@@ -30,7 +30,7 @@ export interface formatsModel {
     regexps: {
       format: RegExp;
     };
-    format: (value: number, pattern: string) => string;
+    format: (value: number, pattern: string, ...args: any[]) => string;
   };
 }
 

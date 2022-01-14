@@ -118,7 +118,7 @@ numable.fn = Numable.prototype = {
   clone: function (this: numableModel) {
     return numable(this);
   },
-  format: function (inputString: string) {
+  format: function (inputString: string, ...args: any[]) {
     var value: number = this._value,
       format: string = inputString || options.defaultFormat,
       kind,
@@ -141,7 +141,7 @@ numable.fn = Numable.prototype = {
 
       formatFunction = formatFunction || numberToFormat;
 
-      output = formatFunction(value, format);
+      output = formatFunction(value, format, ...args);
     }
 
     return output;

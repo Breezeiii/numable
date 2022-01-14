@@ -1,4 +1,5 @@
 ## numable
+
 <img src="https://badgen.net/npm/v/numable"/>&nbsp;
 <img src="https://badgen.net/npm/license/numable"/>&nbsp;
 <img src="https://badgen.net/npm/dt/numable"/>&nbsp;
@@ -24,64 +25,14 @@ const nnn = numable(123456.123456);
 
 ## Format
 
+[demo](https://liuhaifengzzzzz.github.io/numable/example.html)
+
 ```js
 const nnn = numable(123456.123456);
 
 console.log(nnn.format("#,###"));
 // console => 123,456
 ```
-
-<table style="display:table;width:100%;text-align:left">
-  <thead>
-    <th>number</th>
-    <th>format</th>
-    <th>console</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>123456.123</td>
-      <td>#,### || 0,000</td>
-      <td>123,456</td>
-    </tr>
-    <tr>
-      <td>123456.123</td>
-      <td>#,####</td>
-      <td>12,3456</td>
-    </tr>
-    <tr>
-      <td>123456.123</td>
-      <td>##,###.00 || ##,###.##</td>
-      <td>123,456.12</td>
-    </tr>
-    <tr>
-      <td>123456.123</td>
-      <td>#,###</td>
-      <td>123,456</td>
-    </tr>
-    <tr>
-      <td>0.123</td>
-      <td>#,###% || #%</td>
-      <td>12%</td>
-    </tr>
-    <tr>
-      <td>0.123</td>
-      <td>#,###.#% || #.0%</td>
-      <td>12.3%</td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- | number     | format    | console    |
-| ---------- | --------- | ---------- |
-| 123456.123 | #,###     | 123,456    |
-| 123456.123 | #,####    | 12,3456    |
-| 123456.123 | 0,000     | 123,456    |
-| 123456.123 | ##,###.00 | 123,456.12 |
-| 123456.123 | #,###.##  | 123,456.12 |
-| 0.123      | #,###%    | 12%        |
-| 0.123      | #.0%      | 12.3%      |
-| 123        | hh:mm:ss  | 00:02:03   |
-| 123        | mm:ss     | 02:03      | -->
 
 ## Settings
 
