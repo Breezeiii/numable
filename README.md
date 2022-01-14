@@ -35,9 +35,17 @@ const nnn = numable(123456.123456);
 
 ```js
 const nnn = numable(123456.123456);
-
 console.log(nnn.format("#,###"));
 // console => 123,456
+
+// format
+// #,###
+// ￥#,####
+// $#,##0.000
+// 00000#,###000000
+// #.#%
+// #.00%
+// ...
 ```
 
 ## Settings
@@ -55,6 +63,8 @@ numable.defaultOptions({
 
 ## Local
 
+Modify the default separator
+
 ```js
 numable.register("local", "custom-local", {
   decimal: ".",
@@ -66,15 +76,35 @@ numable.local("custom-local");
 
 ## Custom Format
 
+### Example 1
+
 ```js
 numable.register("format", "percent", {
   regexps: {
     format: /(%)/
   },
-  format: function (value, pattern = "") {
+  format: function (value, pattern) {
     const scalePercentByValue = 100;
 
     return numable._.numberToFormat(value * scalePercentByValue, pattern);
+  }
+});
+```
+
+### Example 2
+
+More Flexible formatting
+
+```js
+numable(123.456).format("#,###", 1, 2, 3, 4, 5);
+
+numable.register("format", "Example", {
+  regexps: {
+    format: /(@)/
+  },
+  format: function (value, pattern, ...args) {
+    console.log(value, pattern, args);
+    // console => 123.456, #,###, 1 , 1, 2, 3, 4, 5
   }
 });
 ```
