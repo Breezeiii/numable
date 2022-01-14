@@ -11,6 +11,7 @@ module.exports = {
   dest: "docs",
   theme: "@vuepress/theme-default",
   plugins: [
+    'vuepress-plugin-smooth-scroll',
     [
       "@vuepress/plugin-search",
       {
@@ -28,12 +29,12 @@ module.exports = {
   themeConfig: {
     navbar: [
       {
-        text: "指南",
+        text: "guide",
         link: "/"
       },
       {
-        text: "示例",
-        link: "/Example.md"
+        text: "Example",
+        link: "/example.html"
       }
     ]
   }

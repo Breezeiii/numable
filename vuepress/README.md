@@ -1,3 +1,9 @@
+## numable
+<img src="https://badgen.net/npm/v/numable"/>&nbsp;
+<img src="https://badgen.net/npm/license/numable"/>&nbsp;
+<img src="https://badgen.net/npm/dt/numable"/>&nbsp;
+<img src="https://badgen.net/npm/types/numable"/>
+
 ## use
 
 ```

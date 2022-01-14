@@ -3,29 +3,42 @@ sidebar: false
 ---
 
 <div class="example-container">
-    <div class="example-group" v-for="(item, index) in numbers" :key="index">
-        <h3>number: {{ item.number }}</h3>
-        <p>format: {{ item.format }}</p>
-        <p>console: {{ item.toformat }}</p>
+    <div class="example-group" v-for="(item, index) in formats" :key="index">
+        <p>format: <input  v-model="item.format"/></p>
+        <p>console: {{ item.number }} => {{ valueFormats[index] }}</p>
     </div>
 </div>
 
 <script lang="ts" setup>
 import numable from "../../../../dist";
 
-import { ref } from "vue";
+import { ref,computed } from "vue";
 
-const num = 123456.123;
+const num = 123456789.123;
 const percent = 0.123;
 
-const formats = [
+// ########
+
+const formats = ref([
   {
     number: num,
-    format: "#,###"
+    format: "#,###",
   },
   {
     number: num,
-    format: "#,####"
+    format: "#,####.000000"
+  },
+  {
+    number: num,
+    format: "$#,###",
+  },
+  {
+    number: num,
+    format: "￥#,###",
+  },
+  {
+    number: num,
+    format: "#,###元",
   },
   {
     number: percent,
@@ -33,35 +46,32 @@ const formats = [
   },
   {
     number: percent,
-    format: "#.0%"
-  }
-];
+    format: "#.##%"
+  },
+  {
+    number: percent,
+    format: "#.00%"
+  },
+  {
+    number: num,
+    format: "AAA#,###BBB",
+  },
+]);
 
-const numbers = ref<string[]>([]);
-
-numbers.value = formats.map((item) => {
-  return {
-      ...item,
-      toformat:numable(item.number).format(item.format)
-  };
+const valueFormats = computed(()=>{
+  return  formats.value.map((item) => {
+    return numable(item.number).format(item.format)
+  });
 });
 </script>
 
 <style scoped lang='scss'>
-.example-container{
-    display:grid;
-    grid-template-rows:auto auto ;
-    grid-template-columns:50% 50%;
-    grid-gap: 10px;
-    .example-group {
-        background-color:rgba(0,0,0,0.8);
-        color:#ffffff;
-        border-radius:10px;
-        padding:2px 20px;
-
-        &+.example-group { 
-        }
+.example-container {
+  .example-group {
+    & + .example-group {
+      margin-top:10px;
+      border-top:1px solid #ddd;
     }
-
+  }
 }
 </style>
