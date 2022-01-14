@@ -1,7 +1,3 @@
----
-home: true
----
-
 # [numable](https://liuhaifengzzzzz.github.io/numable)
 
 <img src="https://badgen.net/npm/v/numable"/>&nbsp;
