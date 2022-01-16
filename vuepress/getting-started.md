@@ -21,7 +21,7 @@ To check out live [examples](https://liuhaifengzzzzz.github.io/numable/example.h
 
 ## Format
 
-[See the documentation for detailed formatting Settings](https://liuhaifengzzzzz.github.io/numable/example.html)
+[See the documentation for detailed formatting Settings](https://liuhaifengzzzzz.github.io/numable/format)
 
 ```js
 const nnn = numable(123456.123456);
